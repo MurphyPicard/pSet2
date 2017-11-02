@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <cs50.h>
 
+
+// factorialize
 long long factorialize(int num){
   if (num <= 1){
     return 1;
