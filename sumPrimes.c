@@ -2,11 +2,8 @@
 #include <cs50.h>
 #include <math.h>
 
-
-
 bool isPrime(int number);
 int sumPrimes(int num);
-
 
 int main (void){
     printf( "Please pick a reasonable number: __ ");
@@ -14,24 +11,26 @@ int main (void){
     printf( "%d \n", sumPrimes(n) );
 }
 
-
-bool isPrime(int number){
-    for (int i = 2; i < number; i++){
-        if(number % i == 0){
+bool isPrime(int number)
+{
+    for (int i = 2; i < number/2 + 1; i++)
+    {
+        if(number % i == 0)
+        {
             return false;
         }
     }
     return true;
 }
-
-int sumPrimes(int num){
+int sumPrimes(int num)
+{
     int total = 0;
-
-    for(int j = 2; j <= num; j++){
-        if( isPrime(j) ){
+    for(int j = 2; j <= num; j++)
+    {
+        if( isPrime(j) )
+        {
             total = total + j;
         }
     }
-
     return total;
 }
