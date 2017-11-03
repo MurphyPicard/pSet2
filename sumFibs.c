@@ -23,7 +23,7 @@ int sumFibs (int num)
         }
         int temp = priorfib;
         priorfib = curfib;
-        curfib = temp + priorfib;
+        curfib += temp;
     } while( curfib < num );
     return sum;
 }
