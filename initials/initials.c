@@ -22,7 +22,6 @@ int main (void){
         else if( !isalpha(name[i]) ){
             printf("%c", toupper(name[i + 1]) );
         }
-
     }
     printf("\n");
 }
