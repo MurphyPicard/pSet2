@@ -3,23 +3,31 @@
 #include <string.h>
 #include <ctype.h>
 
-int main (void){
+int main (void)
+{
 
     printf("Please type your name: ___ ");
 
+    // asking the user for his name
     string name = get_string();
     int len = strlen(name);
 
+    // sanity check
     printf("This is your name: %s\n", name);
     printf("this is len: %d \n", len);
 
     for (int i = 0; i < len; i++)
     {
-        if(i == 0){
+
+        // printing the first letter uppercase
+        if (i == 0)
+        {
             printf("%c", toupper(name[i]));
         }
 
-        else if( !isalpha(name[i]) ){
+        // finding spaces and uppercasing the next letter
+        else if ( !isalpha(name[i]) )
+        {
             printf("%c", toupper(name[i + 1]) );
         }
     }
