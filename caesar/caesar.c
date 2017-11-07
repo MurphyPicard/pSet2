@@ -15,18 +15,26 @@ int main(int argc, string argv[])
 
     else if (argc == 2)
     {
+
+        // the second argument typed into the terminal
         string a = argv[1];
         int k = atoi(a);
 
+        // asking user for a string or word to change
         printf("Please enter a string: \n");
         string p = get_string();
 
         printf("ciphertext: ");
         for (int i = 0; i < strlen(p); i++)
         {
+
+            // for uppercase letters
             char formula1 = (p[i] - 65 + k) % 26 + 65;
+
+            // for lowercase letters
             char formula2 = (p[i] - 97 + k) % 26 + 97;
 
+            // printing appropriate uppercase, lowercase or other character
             if (isupper(p[i]))
             {
                 printf("%c", formula1);
