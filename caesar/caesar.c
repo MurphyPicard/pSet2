@@ -18,7 +18,10 @@ int main(int argc, string argv[])
         string a = argv[1];
         int k = atoi(a);
 
+        printf("Please enter a string: \n");
         string p = get_string();
+
+        printf("ciphertext: ");
         for (int i = 0; i < strlen(p); i++)
         {
             char formula1 = (p[i] - 65 + k) % 26 + 65;
