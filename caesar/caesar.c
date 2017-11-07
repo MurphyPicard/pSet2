@@ -1,10 +1,44 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
+#include <stdlib.h>
 #include <ctype.h>
-#include <math.h>
 
-int main (void){
 
-    printf("boilerplate for caesar.c\n");
+int main(int argc, string argv[])
+{
+    if (argc == 1)
+    {
+        printf("yell\n");
+        return 1;
+    }
+
+    else if (argc == 2)
+    {
+        string a = argv[1];
+        int k = atoi(a);
+
+        string p = get_string();
+        for (int i = 0; i < strlen(p); i++)
+        {
+            char formula1 = (p[i] - 65 + k) % 26 + 65;
+            char formula2 = (p[i] - 97 + k) % 26 + 97;
+
+            if (isupper(p[i]))
+            {
+                printf("%c", formula1);
+            }
+            else if (islower(p[i]))
+            {
+                printf("%c", formula2);
+            }
+            else
+            {
+                printf("%c", p[i]);
+            }
+        }
+
+        printf("\n");
+        return 0;
+    }
 }
