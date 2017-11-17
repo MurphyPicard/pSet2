@@ -60,6 +60,7 @@ int main(int argc, string argv[])
             }
             else
             {
+                // Prints a non-alpha character, and the letter variable does not increment.
                 printf("%c", p[i]);
             }
         }
