@@ -39,6 +39,7 @@ int main(int argc, string argv[])
                 char formula3 = (p[i] - 'A' + a[letter] - 'a') % 26 + 'A';//message upper c lower
                 char formula4 = (p[i] - 'a' + a[letter] - 'a') % 26 + 'a';//message lower c lower
 
+                // Using each of the 4 formulas above... should refactor in the future.
                 if (isupper(p[i]) && isupper(a[i % (strlen(argv[1]))]))
                 {
                     printf("%c", formula1);
